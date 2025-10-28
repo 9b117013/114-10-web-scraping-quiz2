@@ -30,7 +30,7 @@ def main():
                 # 擷取價格
                 price_tag = article.find('p', class_='price_color')
                 if price_tag:
-                    price = price_tag.text
+                    price = price_tag.text.strip().replace('Â', '')
                 else:
                     price = None
                 
@@ -66,3 +66,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
